@@ -12,3 +12,4 @@ bin
 out
 *.sublime-*
 *.swp
+**/.DS_Store
