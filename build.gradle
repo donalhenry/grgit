@@ -1,5 +1,5 @@
 plugins {
-  id 'org.ajoberstar.defaults' version '0.7.3'
+  id 'org.ajoberstar.defaults' version '0.8.2'
   id 'org.jbake.site' version '1.0.0'
   id 'java-gradle-plugin'
   id 'groovy'
@@ -10,6 +10,22 @@ description = 'The Groovy way to use Git.'
 
 sourceCompatibility = '1.8'
 
+publishing {
+	// publications {
+	// 	mavenStuff(MavenPublication) {
+	// 		from components.java
+	// 	}
+	// }
+	repositories {
+		maven {
+			url "https://artifactory.scm.awsbest.turner.com/artifactory/libs-snapshot-local"
+			credentials {
+				username "bpsadmin"
+				password "nit6#deg"
+			}
+		}
+	}
+}
 
 
 sourceSets {
